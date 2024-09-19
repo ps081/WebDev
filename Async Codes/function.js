@@ -1,5 +1,17 @@
-const fs = require("fs")
+const fsa = require("fs")
 
-const content = fs.readFileSync('a.txt', 'utf8');
+// fs stands for file system
+
+const content = fsa.readFileSync('a.txt', 'utf8');
 
 console.log(content);
+
+// let user = {
+//     age: 21,
+//     name: "Sandeep",
+//     calcualteAge: function(){
+//         return 10
+//     }
+// }
+
+// console.log(user.calcualteAge())
