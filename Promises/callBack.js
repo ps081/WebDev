@@ -1,15 +1,27 @@
-function stepOne(){
-    console.log("It is the step first after 1 sec");
-    setTimeout(stepTwo, 3000)
-}
+//************************ My written wrong code*************************************
 
-function stepTwo(){
-    console.log("It is the second step after 3 sec")
-    setTimeout(stepThree, 5000);
-}
 
-function stepThree(){
-    console.log("It is the third step after 5 sec")
-}
+// function setTimeOUtWala(ms){
+//     return new Promise(resolve=> setTimeout(resolve, ms))
+// }
 
-setTimeout(stepOne, 1000)
+// setTimeOUtWala(1000)
+// .then(()=>console.log("Hi"), setTimeOUtWala(3000)
+// .then(()=>console.log("Mid printed after 3 sec"), setTimeOUtWala(5000)
+// .then(()=>console.log("Last printed after 5 sec"))))
+
+
+// *************************My written code which is also working*********************
+
+
+// setTimeout(()=>{
+//     console.log("Hi")
+//     setTimeout(()=>{
+//         console.log("yh mid 3 sec wala hain")
+//         setTimeout(()=>{
+//             console.log("Yh hain 5 sec wala")
+//         }, 5000)
+//     }, 3000)
+// }, 1000)
+
+// **************************This is completely fine*******************************************
