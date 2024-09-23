@@ -25,3 +25,26 @@
 // }, 1000)
 
 // **************************This is completely fine*******************************************
+
+
+
+function setTimeoutPromisified(duration){
+    return new Promise((resolve)=>{
+        setTimeout(resolve, duration)
+    })
+}
+
+// Promise chaining
+
+setTimeoutPromisified(1000).
+then(()=>{
+    console.log("hi")
+    return setTimeoutPromisified(3000)
+})
+.then(()=>{
+    console.log("Hello it is 3 sec after");
+    return setTimeoutPromisified(5000)
+})
+.then(()=>{
+    console.log("Hello it is 5 sec after");
+})
